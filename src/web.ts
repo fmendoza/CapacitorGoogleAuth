@@ -70,6 +70,7 @@ export class GoogleAuthWeb extends WebPlugin implements GoogleAuthPlugin {
     gapi.load('auth2', () => {
       const clientConfig: gapi.auth2.ClientConfig = {
         client_id: this.options.clientId,
+        plugin_name: 'FmendozaCapacitorGoogleAuth',
       };
 
       if (this.options.scopes.length) {
